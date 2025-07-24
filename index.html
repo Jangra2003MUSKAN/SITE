@@ -1,0 +1,101 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Birthday Site</title>
+    </head>
+    <body>
+        <div id="header">
+        <h1>Today is Tamanna's birthday 🎉</h1>
+        <img  src="photo2.png" id="bff-img">
+        <h2 id="age">20 years old</h2>
+        <h4 id="date">25-07-2004</h4>
+
+        <div class="gift">
+        
+              <h2  class="hint">Wishing you a day full of Love, Laughter and Cake!🎂</h2>
+              <h3>(you have to click on the every gifts cover)</h3>
+                <div class="gift-img" id="gift-img-cake"  onclick="playSong('song-cake')"></div>
+
+        </div>
+
+         <div class="gift">
+        
+              <h2  class="hint">🪻A year older, a hundred times cuter!🪻</h2>
+                <div class="gift-img" id="gift-img-cute"   onclick="playSong('song-cute')"></div>
+        </div>
+         <div class="gift">
+        
+              <h2  class="hint">🩷May your birthday be as beautiful and special as you are.🩷</h2>
+                <div class="gift-img" id="gift-img-dance"   onclick="playSong('song-dance')"></div>
+                 
+          </div>
+         <div class="gift">
+        
+              <h2  class="hint">💃A birthday is the first day of another 365-day journey around the sun. Enjoy the ride! 💃</h2>
+                <div class="gift-img" id="gift-img-giphy"   onclick="playSong('song-party')"></div>
+        </div>
+         <div class="gift">
+        
+              <h2  class="hint">🫠🫠
+                
+              </h2>
+                <div class="gift-img" id="gift-img-girl"   onclick="playSong('song-girl')"></div>
+        </div>
+        <h2>Grow older, glow brighter- Happy birthday! 🙏🙏</h2>
+        <div class="gift">
+        
+              <h2  class="hint">chal bye🫶🫶</h2>
+                <div class="gift-img" id="gift-img-bye" ></div>
+        </div>
+
+       
+  <!-- 🔈 Audio tags (hidden) -->
+    <audio id="song-cake" preload="none">
+        <source src="tuning(cake).mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="song-cute"  preload="none">
+        <source src="cute-birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="song-dance"  preload="none">
+        <source src="dog(tuning).mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="song-party"  preload="none">
+        <source src="birthday-dog.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="song-girl"  preload="none">
+        <source src="sun re sajniya (park).mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+function playSong(id) {
+    // Pause all songs first
+    document.querySelectorAll("audio").forEach(a => a.pause());
+
+    // Play clicked song
+    const audio = document.getElementById(id);
+    audio.currentTime = 0;
+    audio.play();
+
+    // Change GIF on click
+    const giftBox = event.currentTarget;
+    if (id === "song-cake") {
+        giftBox.style.backgroundImage = "url('cake2.webp')";
+    } else if (id === "song-cute") {
+        giftBox.style.backgroundImage = "url('cute.webp')";
+    } else if (id === "song-dance") {
+        giftBox.style.backgroundImage = "url('dog-dancing.webp')";
+    }
+}
+</script>
+     </div>
+    </body>
+</html>
